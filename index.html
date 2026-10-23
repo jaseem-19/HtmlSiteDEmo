@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nooooraaaa</title>
+
+<style>
+
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    color: #303943;
+    background: #f1f8f7;
+    font-size: 13px;
+}
+
+section {
+    padding: 35px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 27px;
+    margin: 0 0 5px;
+}
+
+h2 {
+    font-size: 21px;
+    margin: 0 0 8px;
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin: 0 0 18px;
+}
+
+.subtitle {
+    color: #7b848a;
+    margin: 0 0 25px;
+    line-height: 1.5;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+/* AVAILABLE COURSES */
+
+.courses {
+    background: #dcedf4;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.course-card {
+    padding: 20px;
+}
+
+.course-card p {
+    color: #888;
+    margin: 12px 0 5px;
+    font-size: 11px;
+}
+
+.course-card ul,
+.course-card ol {
+    padding-left: 18px;
+    margin: 5px 0 12px;
+    line-height: 1.8;
+}
+
+.circle {
+    list-style-type: circle;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.none {
+    list-style-type: none;
+    padding-left: 12px !important;
+}
+
+/* TECHNOLOGY DEFINITIONS */
+
+.technology {
+    background: #d1d1cf;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.tech-card {
+    padding: 18px;
+    margin: 0;
+}
+
+.tech-card h3 {
+    color: #4e9d91;
+    margin-bottom: 8px;
+}
+
+.tech-card p {
+    color: #7b8085;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 12px;
+}
+
+/* QUOTES AND ABBREVIATIONS */
+
+.quotes {
+    background: #dcedf4;
+}
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+blockquote {
+    background: white;
+    border-left: 4px solid #42a89e;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 0;
+    color: #777;
+    font-style: italic;
+    line-height: 1.9;
+}
+
+blockquote footer {
+    color: #222;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+.abbreviations p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+/* STYLING AND LAYOUT */
+
+.styling {
+    background: #d1d1cf;
+}
+
+.font-georgia {
+    font-family: Georgia, serif;
+    color: #70a99c;
+    margin: 8px 0;
+}
+
+.font-courier {
+    font-family: "Courier New", monospace;
+    color: #d6a45d;
+    margin: 8px 0;
+}
+
+.font-arial {
+    font-family: Arial, sans-serif;
+    color: #c76565;
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+.center-box {
+    background: #eaf1ef;
+    text-align: center;
+    padding: 22px;
+    border-radius: 8px;
+    margin: 20px 0 28px;
+}
+
+.center-box h2 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.center-box p {
+    margin: 0;
+    color: #7b848a;
+    font-size: 12px;
+}
+
+.rule-example {
+    color: #858585;
+    font-size: 11px;
+    margin: 15px 0;
+}
+
+hr {
+    border: 0;
+    background: #4b9d93;
+    height: 3px;
+}
+
+.rule-60 {
+    width: 60%;
+    margin: 10px auto;
+}
+
+.rule-40 {
+    width: 40%;
+    margin: 10px 0;
+    background: orange;
+}
+
+.rule-80 {
+    width: 80%;
+    height: 4px;
+    margin: 10px 0 10px auto;
+    background: #347b72;
+}
+
+/* WEBSITE CONTENT */
+
+.website {
+    background: #dcedf4;
+}
+
+.chapter h2 {
+    font-size: 20px;
+}
+
+.chapter p {
+    color: #777f85;
+    line-height: 1.6;
+}
+
+.chapter ol,
+.chapter ul {
+    padding-left: 22px;
+    line-height: 1.8;
+}
+
+.nested-list {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.nested-list p {
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    section {
+        padding: 25px 15px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid,
+    .quote-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+}
+.gallery{
+            margin: 5px;
+            width: 380px;
+            float: left;
+            
+        }
+        .gallery img{
+            width: 100%;
+            height: 200px;
+            
+        }
+        .caption{
+            padding: 18px 12px;
+            text-align: center;
+            background-color: white;
+        }
+        .table{
+            background-color: rgb(255, 255, 255);
+            width: 400px;
+            height: 200px;
+            border-radius: 20px;
+            padding: 15px;
+            display: inline-block;
+            gap: 50px;
+        }
+        
+        .code{
+            display: inline-block;
+
+        }
+        ul.abc{
+            background-color: rgb(5, 5, 5);
+            height: 50px;
+            color: aliceblue;
+            list-style-type: none; 
+            margin: 0;
+            padding: 15;
+        }
+        li.cd{
+            display: inline;
+            color: rgb(230, 226, 226);
+        }
+        #h3{
+            color: black;
+            padding-left: 600px;
+        }
+        .main-container {
+            max-width: 754px;
+            margin: auto;
+            display: flex;
+            gap: 180px;
+            align-items: stretch;
+        }
+
+        .card1{
+            
+            width: 500px;
+            background-color: white;
+            border: 1px solid #e2e2e2;
+            border-radius: 12px;
+            padding: 20px 18px;
+            font-size: 12px;
+            
+        }
+        .card2{
+            
+            width: 500px;
+            background-color: white;
+            border: 1px solid #e2e2e2;
+            border-radius: 12px;
+            padding: 20px 18px;
+            font-size: 12px;
+        }
+
+        h3 {
+            font-size: 13px;
+            margin: 0 0 12px;
+            color: #252936;
+        }
+
+        .alignment {
+            margin: 0 0 7px;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .justify {
+            text-align: justify;
+        }
+
+        .label {
+            display: inline-block;
+            background-color: #e4f3f1;
+            color: #477d78;
+            border-radius: 15px;
+            padding: 2px 10px;
+            font-size: 10px;
+            margin-right: 4px;
+        }
+
+        .hr {
+            border: none;
+            border-top: 1px solid #dddddd;
+            margin: 13px 0;
+        }
+
+        .mark {
+            background-color: #fff0b8;
+            padding: 2px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } 
+
+        .navbar {
+            width: 100%;
+            min-height: 60px;
+            background-color: #1e222e;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #eeeeee;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+        .nav-links {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+        
+
+        .hding{
+            margin-left: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 1300px;
+            height: 8cm;
+            border-radius: 10px;
+        }
+
+        .success {
+            
+            /* margin: auto; */
+            background-color: #d1d1cf;
+        }
+h1.ni {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 6px;
+        }
+.subtitlee {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 28px;
+        }
+.story-card {
+            display: flex;
+            background-color: white;
+            border: 1px solid #e5e0dc;
+            border-radius: 11px;
+            overflow: hidden;
+        }
+.story-image {
+            width: 33%;
+            object-fit: cover;
+        }
+.story-content {
+            flex: 1;
+            padding: 25px;
+        }
+h2.gg {
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 7px;
+        }
+.badgee {
+            display: inline-block;
+            background-color: #e5f1f0;
+            color: #326d69;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            margin-bottom: 14px;
+        }
+blockquote.hh {
+            border-left: 3px solid #e7a64d;
+            padding-left: 12px;
+            margin-bottom: 16px;
+            color: #777;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+p.kk {
+            font-size: 12px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+mark {
+            background-color: #fff0c9;
+            padding: 2px;
+        }
+.footerr {
+            color: #888;
+            font-size: 11px;
+        }
+@media (max-width: 600px) {
+            .story-card {
+                flex-direction: column;
+            }
+.story-image {
+                width: 100%;
+                height: 260px;
+            }
+.story-content {
+                padding: 20px;
+            }
+        }
+        .footer {
+            background-color: #1e2230;
+            color: #b8bac4;
+            text-align: center;
+            padding: 55px 15px;
+        }
+.footer p {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+.footer .built {
+            font-size: 20px;
+            color: #9295a3;
+        }
+.footer a {
+            color: #9295a3;
+            text-decoration: underline;
+        }
+@media (max-width: 600px) {
+            .footer p {
+                font-size: 16px;
+            }
+.footer .built {
+                font-size: 14px;
+            }
+        }
+        
+</style>
+</head>
+
+
+<body>
+    <nav class="navbar">
+
+        <div class="logo">
+             WebTech Portal
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Introduction</a>
+            <a href="#">Code</a>
+            <a href="#">Gallery</a>
+            <a href="#">Updates</a>
+            <a href="#">Courses</a>
+            <a href="#">Definitions</a>
+            <a href="#">Quotes</a>
+            <a href="#">Styling</a>
+            <a href="#">Structure</a>
+            <a href="#">Success</a>
+        </div>
+
+    </nav>
+    
+   <h1 class="jaseem"> Introduction to HTML</h1>
+     <P style="color: grey; margin-left: 60px;">Explore every heading level and text formating tag available in HTML</P>
+
+     <div  class="hding">
+        <h1> &nbsp;Heading 1- The Main Title</h1>
+        <h2>&nbsp;Heading 2- Section Title</h2>
+        <h3 >&nbsp;Heading 3- Subsectio</h3>
+        <h4>&nbsp;Heading 4- Topic  </h4>
+        <h5>&nbsp;Heading 5 - Subtopic</h5>
+        <h6>&nbsp;Heading 6 - Details</h6>
+     </div>
+
+      <div class="main-container">
+
+        <!-- Paragraph Alignments -->
+        <div class="card1">
+
+            <h3>Paragraph Alignments</h3>
+
+            <p class="alignment left">
+                <span class="label">Left</span>
+                This paragraph is aligned to the left, which is the
+                default alignment for most text content on the web.
+            </p>
+
+            <p class="alignment right">
+                <span class="label">Right</span>
+                This paragraph is right-aligned, often used for dates
+                or signatures.
+            </p>
+
+            <p class="alignment center">
+                <span class="label">Center</span>
+                This paragraph is centered, commonly used for
+                headings and titles.
+            </p>
+
+            <p class="alignment justify">
+                <span class="label">Justify</span>
+                This paragraph is justified. The text stretches so
+                that each line has equal width, creating a clean
+                block appearance similar to newspapers and books.
+            </p>
+
+        </div>
+
+        <!-- Line Breaks & Formatting -->
+        <div class="card2">
+
+            <h3>Line Breaks &amp; Formatting</h3>
+
+            HTML stands for <strong>HyperText Markup Language.</strong>
+            <br>
+
+            It was created by <em>Tim Berners-Lee</em> in 1991.
+            <br>
+
+            HTML is the <u>backbone</u> of every website.
+
+            <hr>
+
+            <strong>Strong emphasis</strong> vs <em>emphasis</em>
+            <br>
+
+            Big text vs <small>small text</small>
+            <br>
+
+            H<sub>2</sub>O is water, E = mc<sup>2</sup>
+            <br>
+
+            <mark>Highlighted text</mark> and
+            <del>deleted text</del>
+
+        </div>
+
+    </div>
+
+
+     <h1 style="margin-left: 80px;">Speciel Characters & Code Display </h1>
+        <p style="color: grey; margin-left: 60px;">HTML entities and performatted code blocks.</p>
+        &nbsp;    <h3 id="h3"><b>Code Preview Block</b></h3>
+        <div class="code">
+        <div class="table">
+            <table border="1">
+                <tr>
+                <thead>HTML Entities</thead>
+                <th>Entity</th>
+                <th>Symbol</th>
+                <th>Description</th>
+                </tr>
+                <tr>
+                    <td> & nbsp; </td>
+                    <td>(space)</td>
+                    <td>non-breaking space</td>
+                </tr>
+                <tr>
+                    <td>& lt;</td>
+                    <td> &lt;</td>
+                    <td>Less than</td>
+                </tr>
+                <td>& gt</td>
+                <td>&gt;</td>
+                <td>Greater than</td>
+                </tr>
+                <tr>
+                    <td>& copy;</td>
+                    <td>&copy;</td>
+                    <td>Copyright</td>
+                </tr>
+                <tr>
+                    <td>& reg;</td>
+                    <td>&reg;</td>
+                    <td>Registered</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+        <div class="imgagecode" style="display: inline-flex; gap: 50px;">
+        <!-- <p> <b>Code Preview Block</b></p> -->
+
+        <img src="images/IMG_1589.jpg" alt="" width="400px">
+        <div >
+
+        </div>
+     </div>
+        
+     <div class="galox" style="margin-bottom: 400px; background-color:#dcedf4 ;">
+
+     
+        <h1 style="margin-left: 80px">Image Gallery</h1>
+        <p style="color: grey; margin-left: 70px">Demonstrating image attributes: width,height,alignment,spacing, and bords.</p>
+
+        <div class="gallery">
+            <img src="images/shield.jpg" alt="" width="300px">
+            <div class="caption"><p><b>HTML5</b></p>
+            <p>Image inside a paragraph - centered with border attribute.</p></div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/css.jpg" alt="" width="300px" height="">
+            <div class="caption"> <p><b>CSS3</b></p>
+            <p>Image aligned left with hspace & vspace equivalent margins.</p></div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/js.jpg" alt="" width="300px">
+            <div class="caption"><p><b>Java Script</b></p>
+            <p>Image aligned right demonstrating float-right positioning.</p></div>
+        </div>
+        <br><br>
+        <br>
+</div>
+      <div  style="background-color: #d1d1cf;">
+        <h2 id="liveupdates">Live Updates</h2>
+        <p>Animated scrolling announcement (CSS-based marquee alternated)</p>
+        <marquee behavior="loop" direction="left" bgcolor="lightskyblue"><p>New Course Alert: Advanced React patterns - Enroll Now! 
+            Limited seats available for the Summer Bootcamp 2026! </p></marquee><br>
+            <marquee behavior="loop" direction="right" bgcolor="orange"><p>Congratulations to our Top Learners of the Month!  
+                500+ students graduated this quarter</p></marquee><br>
+                <marquee behavior="loop" direction="left" bgcolor="lightskyblue" > Javascript Masterclass starts Monday 
+                    - Don't miss out!</marquee>
+                    <marquee behavior="loop" direction="up" bgcolor="lightgrey" height="90px">Learn JavaScript - the language of the web! Build interactive 
+                        websites today</marquee>
+    </div>
+
+<!-- AVAILABLE COURSES -->
+<section class="courses">
+<div class="container">
+
+<h1>Available Courses</h1>
+<p class="subtitle">
+Demonstrating unordered, ordered, and nested lists with different markers.
+</p>
+
+<div class="course-grid">
+
+<div class="card course-card">
+<h3>Unordered Lists</h3>
+
+<p>type: disc (default)</p>
+<ul>
+<li>HTML Fundamentals</li>
+<li>CSS Basics</li>
+</ul>
+
+<p>type: circle</p>
+<ul class="circle">
+<li>JavaScript</li>
+<li>TypeScript</li>
+</ul>
+
+<p>type: square</p>
+<ul class="square">
+<li>React</li>
+<li>Node.js</li>
+</ul>
+
+<p>type: none</p>
+<ul class="none">
+<li>Docker</li>
+<li>AWS</li>
+</ul>
+</div>
+
+<div class="card course-card">
+<h3>Ordered Lists</h3>
+
+<p>type: 1 (default)</p>
+<ol>
+<li>Introduction to Web</li>
+<li>Setting Up Environment</li>
+</ol>
+
+<p>type: A</p>
+<ol type="A">
+<li>Frontend Development</li>
+<li>Backend Development</li>
+</ol>
+
+<p>type: a</p>
+<ol type="a">
+<li>Database Design</li>
+<li>API Development</li>
+</ol>
+
+<p>type: I (starts 3)</p>
+<ol type="I" start="3">
+<li>Advanced Patterns</li>
+<li>Deployment</li>
+</ol>
+</div>
+
+<div class="card course-card">
+<h3>Nested Structure</h3>
+
+<ol>
+<li>
+<strong>Web Development</strong>
+<ul class="circle">
+<li>Module 1: HTML
+    <ul class="circle">
+        <li>Tags &amp; Elements</li>
+        <li>Attributes</li>
+        <li>Forms</li>
+    </ul>
+</li>
+<li>Module 2: CSS
+    <ul class="circle">
+        <li>Selectors</li>
+        <li>Flexbox &amp; Grid</li>
+    </ul>
+</li>
+</ul>
+</li>
+
+<li>
+<strong>Programming</strong>
+<ul class="circle">
+<li>Module 1: JavaScript
+    <ul class="circle">
+        <li>Variables &amp; Functions</li>
+        <li>DOM Manipulation</li>
+    </ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TECHNOLOGY DEFINITIONS -->
+<section class="technology">
+<div class="container">
+
+<h1> Technology Definitions</h1>
+<p class="subtitle">
+A definition list of key web technologies.
+</p>
+
+<div class="tech-grid">
+
+<div class="card tech-card">
+<h3>HTML</h3>
+<p>
+HyperText Markup Language — the standard language
+for creating web pages and web applications.
+</p>
+</div>
+
+<div class="card tech-card">
+<h3>CSS</h3>
+<p>
+Cascading Style Sheets — used to describe the
+presentation and layout of HTML documents.
+</p>
+</div>
+
+<div class="card tech-card">
+<h3>JavaScript</h3>
+<p>
+A high-level, interpreted programming language
+that enables interactive web pages and dynamic content.
+</p>
+</div>
+
+<div class="card tech-card">
+<h3>React</h3>
+<p>
+A JavaScript library for building user interfaces,
+maintained by Meta and a community of developers.
+</p>
+</div>
+
+<div class="card tech-card">
+<h3>Node.js</h3>
+<p>
+A runtime environment that executes JavaScript code
+outside a web browser, enabling server-side development.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- QUOTES AND ABBREVIATIONS -->
+<section class="quotes">
+<div class="container">
+
+<h1> Quotes &amp; Abbreviations</h1>
+<p class="subtitle">Using blockquote and abbr elements.</p>
+
+<div class="quote-grid">
+
+<blockquote>
+"The Web as I envisaged it, we have not seen it yet.
+The future is still so much bigger than the past."
+<footer>
+— Tim Berners-Lee, inventor of the
+<abbr title="World Wide Web">WWW</abbr>
+</footer>
+</blockquote>
+
+<div class="card abbreviations">
+<h3>Common Abbreviations</h3>
+
+<p><abbr title="HyperText Markup Language">HTML</abbr>
+is the foundation of all web content.</p>
+
+<p><abbr title="Cascading Style Sheets">CSS</abbr>
+handles visual presentation and layout.</p>
+
+<p><abbr title="Application Programming Interface">API</abbr>
+enables communication between software systems.</p>
+
+<p><abbr title="Document Object Model">DOM</abbr>
+represents the page structure as a tree of objects.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- STYLING AND LAYOUT ENHANCEMENTS -->
+<section class="styling">
+<div class="container">
+
+<h1> Styling &amp; Layout Enhancements</h1>
+<p class="subtitle">
+Demonstrating legacy font styling, centering,
+and horizontal rules with various attributes.
+</p>
+
+<div class="card">
+<h3>Font Variations</h3>
+
+<p class="font-georgia">
+    font face="Georgia" size="4" color="teal"
+— Serif style text
+</p>
+
+<p class="font-courier">
+font face="Courier New" size="3" color="orange"
+— Monospace style
+</p>
+
+<p class="font-arial">
+font face="Arial" size="5" color="red"
+— Sans-serif display
+</p>
+</div>
+
+<div class="center-box">
+<h2>This content is centered</h2>
+<p>Equivalent of the legacy &lt;center&gt; tag</p>
+</div>
+
+<div class="card">
+<h3>Horizontal Rules (&lt;hr&gt;)</h3>
+
+<div class="rule-example">
+width="100%", size="1" — Full width, thin
+<hr style="height:1px; background:#ddd;">
+</div>
+
+<div class="rule-example">
+width="60%", size="3", align="center"
+<hr class="rule-60">
+</div>
+
+<div class="rule-example">
+width="40%", align="left", color="orange"
+<hr class="rule-40">
+</div>
+
+<div class="rule-example">
+width="80%", size="4", align="right"
+<hr class="rule-80">
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- WEBSITE CONTENT STRUCTURE -->
+<section class="website">
+<div class="container">
+
+<h1>Website Content Structure</h1>
+<p class="subtitle">
+A documentation-style layout combining headings, lists, and paragraphs.
+</p>
+
+<div class="card chapter">
+<h2>Chapter 1: Introduction</h2>
+<p>
+This chapter covers the fundamentals of web technologies
+and how the internet delivers content to users worldwide.
+</p>
+
+<ol>
+<li>What is the Internet?</li>
+<li>How Web Browsers Work</li>
+<li>Client-Server Architecture</li>
+</ol>
+</div>
+
+<div class="card chapter">
+<h2>Chapter 2: Web Design</h2>
+<p>
+Learn the principles of effective web design,
+including layout, typography, and color theory.
+</p>
+
+<ul>
+<li>
+<strong>Data Flow</strong>
+<div class="nested-list">
+<p>
+Understanding how data moves between the frontend
+and backend through APIs and databases.
+</p>
+<ol>
+<li>Request &amp; Response Cycle</li>
+<li>RESTful API Design</li>
+<li>State Management</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- SYSTEM DESIGN -->
+<section class="website">
+<div class="container">
+
+<div class="card chapter">
+<h2>Chapter 3: System Design</h2>
+<p>
+Explore the architecture and design patterns used
+in building scalable web applications.
+</p>
+
+<ul>
+<li>
+<strong>Input Design</strong>
+<div class="nested-list">
+<p>Designing user-friendly forms and data entry interfaces.</p>
+<ul>
+<li>Form Validation</li>
+<li>Accessibility Considerations</li>
+<li>Error Handling &amp; Feedback</li>
+</ul>
+</div>
+</li>
+
+<li>
+<strong>Output Design</strong>
+<div class="nested-list">
+<p>
+Presenting data in a clear, actionable format for end users.
+</p>
+<ul>
+<li>Dashboards &amp; Reports</li>
+<li>Data Visualization</li>
+<li>Export &amp; Print Layouts</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+
+ <div class="success">
+<h1 class="ni">Success Story</h1>
+<div class="subtitlee">
+            A real-world example of how learning web technologies can change lives.
+        </div>
+<div class="story-card">
+ <img src="images/priya sharma.jpeg" alt="" width="200px">
+            >
+<div class="story-content">
+<h2 class="gg">Priya Sharma</h2>
+<span class="badgee">
+                    Self-Taught Developer → Senior Engineer
+                </span>
+<blockquote class="hh">
+                    "I started with zero knowledge of coding.
+                    Through <b>dedication</b> and consistent practice,
+                    I went from writing my first &lt;h1&gt; tag to leading
+                    a team of 12 engineers at a Fortune 500 company."
+                </blockquote>
+<p class="kk">
+                    Priya's journey began in 2019 when she discovered
+                    <b>free HTML tutorials</b> online. Within
+                    <i>six months</i>, she had built her first portfolio
+                    website. By 2021, she landed her first
+                    <b>junior developer</b> role.
+                </p>
+<p class="kk">
+                    Key milestones:
+                    <mark>1,000+ hours of coding practice</mark>,
+                    15 personal projects, and
+                    <b>zero countless failures</b> that became lessons.
+                </p>
+<div class="footerr">
+
+
+H₂O fueled her late-night sessions.
+                    Her motto: "Dream big, code bigger!" ™
+                </div>
+</div>
+        </div>
+</div>
+
+<footer class="footer">
+        <p>
+            &copy; 2026 Complete Web Technology Learning Portal.
+            All rights reserved. &reg;
+        </p>
+<p class="built">
+            Built with
+            <a href="#">HTML</a>,
+            <a href="#">CSS</a> &
+            <a href="#">React</a>
+        </p>
+    </footer>
+
+</body>
+</html>
